@@ -28,6 +28,10 @@ export interface Asset {
    */
   address?: string;
   /**
+   * [OPTIONAL] The type of token.
+   */
+  token_type?: "lp";
+  /**
    * The base unit of the asset. Must be in denom_units.
    */
   base: string;
@@ -57,7 +61,6 @@ export interface Asset {
   };
   logo_URIs?: {
     png?: string;
-    svg?: string;
   };
   /**
    * @minItems 1
@@ -66,7 +69,6 @@ export interface Asset {
     {
       image_sync?: Pointer;
       png?: string;
-      svg?: string;
       theme?: {
         primary_color_hex?: string;
         circle?: boolean;
@@ -76,7 +78,6 @@ export interface Asset {
     ...{
       image_sync?: Pointer;
       png?: string;
-      svg?: string;
       theme?: {
         primary_color_hex?: string;
         circle?: boolean;
@@ -88,6 +89,10 @@ export interface Asset {
    * [OPTIONAL] The coingecko id to fetch asset data from coingecko v3 api. See https://api.coingecko.com/api/v3/coins/list
    */
   coingecko_id?: string;
+  /**
+   * [OPTIONAL] The onchain oracle symbol of connect module
+   */
+  oracle_symbol?: string;
   keywords?: string[];
 }
 export interface DenomUnit {
@@ -102,6 +107,10 @@ export interface IbcTransition {
      * The name of the counterparty chain. (must match exactly the chain name used in the Chain Registry)
      */
     chain_name: string;
+    /**
+     * The chain id of the counterparty chain.
+     */
+    chain_id: string;
     /**
      * The base unit of the asset on its source platform. E.g., when describing ATOM from Cosmos Hub, specify 'uatom', NOT 'atom' nor 'ATOM'; base units are unique per platform.
      */
@@ -129,6 +138,10 @@ export interface IbcCw20Transition {
      * The name of the counterparty chain. (must match exactly the chain name used in the Chain Registry)
      */
     chain_name: string;
+    /**
+     * The chain id of the counterparty chain.
+     */
+    chain_id: string;
     /**
      * The base unit of the asset on its source platform. E.g., when describing ATOM from Cosmos Hub, specify 'uatom', NOT 'atom' nor 'ATOM'; base units are unique per platform.
      */
@@ -164,6 +177,10 @@ export interface NonIbcTransition {
      * The chain or platform from which the asset originates. E.g., 'cosmoshub', 'ethereum', 'forex', or 'nasdaq'
      */
     chain_name: string;
+    /**
+     * The chain id of the counterparty chain.
+     */
+    chain_id: string;
     base_denom: string;
     /**
      * The contract address where the transition takes place, where applicable. E.g., The Ethereum contract that locks up the asset while it's minted on another chain.
@@ -188,6 +205,10 @@ export interface OpTransition {
      * The name of the counterparty chain. (must match exactly the chain name used in the Chain Registry)
      */
     chain_name: string;
+    /**
+     * The chain id of the counterparty chain.
+     */
+    chain_id: string;
     /**
      * The base unit of the asset on its source platform. E.g., when describing ATOM from Cosmos Hub, specify 'uatom', NOT 'atom' nor 'ATOM'; base units are unique per platform.
      */

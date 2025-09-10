@@ -1,4 +1,4 @@
-import { Chain } from "@initia/initia-registry-types"
+import { Chain } from "@initia/initia-registry-types";
 const info: Chain = {
   $schema: "../../chain.schema.json",
   chain_name: "minimove",
@@ -10,8 +10,8 @@ const info: Chain = {
   bech32_prefix: "init",
   daemon_name: "minitiad",
   node_home: "$HOME/.minitia",
-  key_algos: ["secp256k1"],
-  slip44: 118,
+  key_algos: ["initia_ethsecp256k1", "secp256k1"],
+  slip44: 60,
   fees: {
     fee_tokens: [
       {
@@ -22,9 +22,6 @@ const info: Chain = {
         high_gas_price: 0,
       },
     ],
-  },
-  staking: {
-    staking_tokens: [],
   },
   codebase: {},
   description: "Minimove Public Testnet",
@@ -77,13 +74,11 @@ const info: Chain = {
   ],
   images: [
     {
-      png: "https://raw.githubusercontent.com/initia-labs/initia-registry/main/testnets/minimove/images/minimove.png",
-      svg: "https://raw.githubusercontent.com/initia-labs/initia-registry/main/testnets/minimove/images/minimove.svg",
+      png: "https://raw.githubusercontent.com/initia-labs/initia-registry/main/images/minimove.png",
     },
   ],
   logo_URIs: {
-    png: "https://raw.githubusercontent.com/initia-labs/initia-registry/main/testnets/minimove/images/minimove.png",
-    svg: "https://raw.githubusercontent.com/initia-labs/initia-registry/main/testnets/minimove/images/minimove.svg",
+    png: "https://raw.githubusercontent.com/initia-labs/initia-registry/main/images/minimove.png",
   },
   metadata: {
     op_bridge_id: "3",
@@ -110,5 +105,5 @@ const info: Chain = {
       version: "v0.5.6",
     },
   },
-}
-export default info
+};
+export default info;

@@ -23,7 +23,8 @@
           "type": "op",
           "counterparty": {
             "base_denom": "uinit",
-            "chain_name": "initia"
+            "chain_name": "initia",
+            "chain_id": "initiation-2"
           },
           "chain": {
             "bridge_id": "1"
@@ -32,16 +33,14 @@
       ],
       "name": "Initia Native Token",
       "symbol": "INIT",
-      "coingecko_id": "",
+      "coingecko_id": "initia",
       "images": [
         {
-          "png": "https://raw.githubusercontent.com/initia-labs/initia-registry/main/testnets/minievm/images/INIT.png",
-          "svg": "https://raw.githubusercontent.com/initia-labs/initia-registry/main/testnets/minievm/images/INIT.svg"
+          "png": "https://raw.githubusercontent.com/initia-labs/initia-registry/main/images/INIT.png"
         }
       ],
       "logo_URIs": {
-        "png": "https://raw.githubusercontent.com/initia-labs/initia-registry/main/testnets/minievm/images/INIT.png",
-        "svg": "https://raw.githubusercontent.com/initia-labs/initia-registry/main/testnets/minievm/images/INIT.svg"
+        "png": "https://raw.githubusercontent.com/initia-labs/initia-registry/main/images/INIT.png"
       }
     },
     {
@@ -61,13 +60,11 @@
       "coingecko_id": "",
       "images": [
         {
-          "png": "https://raw.githubusercontent.com/initia-labs/initia-registry/main/testnets/minievm/images/GAS.png",
-          "svg": "https://raw.githubusercontent.com/initia-labs/initia-registry/main/testnets/minievm/images/GAS.svg"
+          "png": "https://raw.githubusercontent.com/initia-labs/initia-registry/main/images/GAS.png"
         }
       ],
       "logo_URIs": {
-        "png": "https://raw.githubusercontent.com/initia-labs/initia-registry/main/testnets/minievm/images/GAS.png",
-        "svg": "https://raw.githubusercontent.com/initia-labs/initia-registry/main/testnets/minievm/images/GAS.svg"
+        "png": "https://raw.githubusercontent.com/initia-labs/initia-registry/main/images/GAS.png"
       }
     },
     {
@@ -88,12 +85,13 @@
       "display": "ETH",
       "name": "Fake ETH Token",
       "symbol": "ETH",
-      "coingecko_id": "",
+      "coingecko_id": "ethereum",
       "traces": [
         {
           "type": "ibc",
           "counterparty": {
             "chain_name": "initia",
+            "chain_id": "initiation-2",
             "base_denom": "ueth",
             "channel_id": "channel-0"
           },
@@ -105,13 +103,11 @@
       ],
       "images": [
         {
-          "png": "https://raw.githubusercontent.com/initia-labs/initia-registry/main/testnets/initia/images/ETH.png",
-          "svg": "https://raw.githubusercontent.com/initia-labs/initia-registry/main/testnets/initia/images/ETH.svg"
+          "png": "https://raw.githubusercontent.com/initia-labs/initia-registry/main/images/ETH.png"
         }
       ],
       "logo_URIs": {
-        "png": "https://raw.githubusercontent.com/initia-labs/initia-registry/main/testnets/initia/images/ETH.png",
-        "svg": "https://raw.githubusercontent.com/initia-labs/initia-registry/main/testnets/initia/images/ETH.svg"
+        "png": "https://raw.githubusercontent.com/initia-labs/initia-registry/main/images/ETH.png"
       }
     },
     {
@@ -132,12 +128,13 @@
       "display": "USDC",
       "name": "USDC",
       "symbol": "USDC",
-      "coingecko_id": "",
+      "coingecko_id": "usd-coin",
       "traces": [
         {
           "type": "ibc",
           "counterparty": {
             "chain_name": "initia",
+            "chain_id": "initiation-2",
             "base_denom": "uusdc",
             "channel_id": "channel-0"
           },
@@ -149,13 +146,11 @@
       ],
       "images": [
         {
-          "png": "https://raw.githubusercontent.com/initia-labs/initia-registry/main/testnets/minievm/images/USDC.png",
-          "svg": "https://raw.githubusercontent.com/initia-labs/initia-registry/main/testnets/minievm/images/USDC.svg"
+          "png": "https://raw.githubusercontent.com/initia-labs/initia-registry/main/images/USDC.png"
         }
       ],
       "logo_URIs": {
-        "png": "https://raw.githubusercontent.com/initia-labs/initia-registry/main/testnets/minievm/images/USDC.png",
-        "svg": "https://raw.githubusercontent.com/initia-labs/initia-registry/main/testnets/minievm/images/USDC.svg"
+        "png": "https://raw.githubusercontent.com/initia-labs/initia-registry/main/images/USDC.png"
       }
     },
     {
@@ -176,12 +171,13 @@
       "display": "TIA",
       "name": "Fake TIA Token",
       "symbol": "TIA",
-      "coingecko_id": "",
+      "coingecko_id": "celestia",
       "traces": [
         {
           "type": "ibc",
           "counterparty": {
             "chain_name": "initia",
+            "chain_id": "initiation-2",
             "base_denom": "utia",
             "channel_id": "channel-0"
           },
@@ -193,13 +189,11 @@
       ],
       "images": [
         {
-          "png": "https://raw.githubusercontent.com/initia-labs/initia-registry/main/testnets/initia/images/TIA.png",
-          "svg": "https://raw.githubusercontent.com/initia-labs/initia-registry/main/testnets/initia/images/TIA.svg"
+          "png": "https://raw.githubusercontent.com/initia-labs/initia-registry/main/images/TIA.png"
         }
       ],
       "logo_URIs": {
-        "png": "https://raw.githubusercontent.com/initia-labs/initia-registry/main/testnets/initia/images/TIA.png",
-        "svg": "https://raw.githubusercontent.com/initia-labs/initia-registry/main/testnets/initia/images/TIA.svg"
+        "png": "https://raw.githubusercontent.com/initia-labs/initia-registry/main/images/TIA.png"
       }
     },
     {
@@ -226,6 +220,7 @@
           "type": "ibc",
           "counterparty": {
             "chain_name": "initia",
+            "chain_id": "initiation-2",
             "base_denom": "move/7dfcccb8d69af29d585165531eae5c558061d3e3bded2a121be3ef5e189e6b01",
             "channel_id": "channel-0"
           },
@@ -237,11 +232,11 @@
       ],
       "images": [
         {
-          "png": "https://raw.githubusercontent.com/initia-labs/initia-registry/main/testnets/initia/images/bsc-test-lz.png"
+          "png": "https://raw.githubusercontent.com/initia-labs/initia-registry/main/images/bsc-test-lz.png"
         }
       ],
       "logo_URIs": {
-        "png": "https://raw.githubusercontent.com/initia-labs/initia-registry/main/testnets/initia/images/bsc-test-lz.png"
+        "png": "https://raw.githubusercontent.com/initia-labs/initia-registry/main/images/bsc-test-lz.png"
       }
     }
   ]

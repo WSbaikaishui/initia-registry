@@ -94,7 +94,13 @@
       "type": "array",
       "items": {
         "type": "string",
-        "enum": ["secp256k1", "ethsecp256k1", "ed25519", "sr25519", "bn254"],
+        "enum": [
+          "secp256k1",
+          "initia_ethsecp256k1",
+          "ed25519",
+          "sr25519",
+          "bn254"
+        ],
         "uniqueItems": true
       }
     },
@@ -392,11 +398,6 @@
             "format": "uri-reference",
             "pattern": "^https://.+\\.png$"
           },
-          "svg": {
-            "type": "string",
-            "format": "uri-reference",
-            "pattern": "^https://.+\\.svg$"
-          },
           "theme": {
             "type": "object",
             "properties": {
@@ -437,9 +438,6 @@
         "anyOf": [
           {
             "required": ["png"]
-          },
-          {
-            "required": ["svg"]
           }
         ],
         "additionalProperties": false
@@ -452,11 +450,6 @@
           "type": "string",
           "format": "uri-reference",
           "pattern": "^https://.+\\.png$"
-        },
-        "svg": {
-          "type": "string",
-          "format": "uri-reference",
-          "pattern": "^https://.+\\.svg$"
         }
       },
       "additionalProperties": false
@@ -540,6 +533,14 @@
           },
           "minContains": 1,
           "description": "Evm json rpc websocket uri"
+        },
+        "indexer": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/secureEndpoint"
+          },
+          "minContains": 1,
+          "description": "Indexer uri"
         }
       },
       "additionalProperties": false
@@ -574,6 +575,10 @@
     "metadata": {
       "type": "object",
       "properties": {
+        "deprecated": {
+          "type": "boolean",
+          "description": "[Optional] Indicates if the chain will be deprecated soon"
+        },
         "is_l1": {
           "type": "boolean",
           "description": "[Optional] Indicates if the chain is a layer 1 chain."

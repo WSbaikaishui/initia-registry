@@ -35,6 +35,10 @@ export const AssetListSchema = z
               "[OPTIONAL] The address of the asset. Only required for type_asset : cw20, snip20"
             )
             .optional(),
+          token_type: z
+            .literal("lp")
+            .describe("[OPTIONAL] The type of token.")
+            .optional(),
           base: z
             .string()
             .describe("The base unit of the asset. Must be in denom_units."),
@@ -63,6 +67,9 @@ export const AssetListSchema = z
                           .describe(
                             "The name of the counterparty chain. (must match exactly the chain name used in the Chain Registry)"
                           ),
+                        chain_id: z
+                          .string()
+                          .describe("The chain id of the counterparty chain."),
                         base_denom: z
                           .string()
                           .describe(
@@ -103,6 +110,9 @@ export const AssetListSchema = z
                           .describe(
                             "The name of the counterparty chain. (must match exactly the chain name used in the Chain Registry)"
                           ),
+                        chain_id: z
+                          .string()
+                          .describe("The chain id of the counterparty chain."),
                         base_denom: z
                           .string()
                           .describe(
@@ -160,6 +170,9 @@ export const AssetListSchema = z
                           .describe(
                             "The chain or platform from which the asset originates. E.g., 'cosmoshub', 'ethereum', 'forex', or 'nasdaq'"
                           ),
+                        chain_id: z
+                          .string()
+                          .describe("The chain id of the counterparty chain."),
                         base_denom: z.string(),
                         contract: z
                           .string()
@@ -196,6 +209,9 @@ export const AssetListSchema = z
                           .describe(
                             "The name of the counterparty chain. (must match exactly the chain name used in the Chain Registry)"
                           ),
+                        chain_id: z
+                          .string()
+                          .describe("The chain id of the counterparty chain."),
                         base_denom: z
                           .string()
                           .describe(
@@ -237,10 +253,6 @@ export const AssetListSchema = z
                 .string()
                 .regex(new RegExp("^https://.+\\.png$"))
                 .optional(),
-              svg: z
-                .string()
-                .regex(new RegExp("^https://.+\\.svg$"))
-                .optional(),
             })
             .strict()
             .optional(),
@@ -271,10 +283,6 @@ export const AssetListSchema = z
                     .string()
                     .regex(new RegExp("^https://.+\\.png$"))
                     .optional(),
-                  svg: z
-                    .string()
-                    .regex(new RegExp("^https://.+\\.svg$"))
-                    .optional(),
                   theme: z
                     .object({
                       primary_color_hex: z
@@ -296,6 +304,10 @@ export const AssetListSchema = z
             .describe(
               "[OPTIONAL] The coingecko id to fetch asset data from coingecko v3 api. See https://api.coingecko.com/api/v3/coins/list"
             )
+            .optional(),
+          oracle_symbol: z
+            .string()
+            .describe("[OPTIONAL] The onchain oracle symbol of connect module")
             .optional(),
           keywords: z.array(z.string()).optional(),
         })

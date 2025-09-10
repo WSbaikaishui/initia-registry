@@ -9,8 +9,8 @@
   "bech32_prefix": "init",
   "daemon_name": "minitiad",
   "node_home": "$HOME/.minitia",
-  "key_algos": ["secp256k1"],
-  "slip44": 118,
+  "key_algos": ["initia_ethsecp256k1", "secp256k1"],
+  "slip44": 60,
   "fees": {
     "fee_tokens": [
       {
@@ -22,18 +22,15 @@
       }
     ]
   },
-  "staking": {
-    "staking_tokens": []
-  },
   "codebase": {
     "git_repo": "https://github.com/initia-labs/minimove",
-    "recommended_version": "v0.6.5",
-    "compatible_versions": ["v0.6.5"],
+    "recommended_version": "v1.0.2",
+    "compatible_versions": ["v1.0.2"],
     "binaries": {
-      "linux/amd64": "https://github.com/initia-labs/minimove/releases/download/v0.6.5/minimove_v0.6.5_Linux_x86_64.tar.gz",
-      "linux/arm64": "https://github.com/initia-labs/minimove/releases/download/v0.6.5/minimove_v0.6.5_Linux_aarch64.tar.gz",
-      "darwin/amd64": "https://github.com/initia-labs/minimove/releases/download/v0.6.5/minimove_v0.6.5_Darwin_x86_64.tar.gz",
-      "darwin/arm64": "https://github.com/initia-labs/minimove/releases/download/v0.6.5/minimove_v0.6.5_Darwin_aarch64.tar.gz"
+      "linux/amd64": "https://github.com/initia-labs/minimove/releases/download/v1.0.2/minimove_v1.0.2_Linux_x86_64.tar.gz",
+      "linux/arm64": "https://github.com/initia-labs/minimove/releases/download/v1.0.2/minimove_v1.0.2_Linux_aarch64.tar.gz",
+      "darwin/amd64": "https://github.com/initia-labs/minimove/releases/download/v1.0.2/minimove_v1.0.2_Darwin_x86_64.tar.gz",
+      "darwin/arm64": "https://github.com/initia-labs/minimove/releases/download/v1.0.2/minimove_v1.0.2_Darwin_aarch64.tar.gz"
     },
     "genesis": {
       "genesis_url": "https://storage.googleapis.com/init-common-genesis/minimove-2/genesis.json"
@@ -98,6 +95,30 @@
           "darwin/amd64": "https://github.com/initia-labs/minimove/releases/download/v0.6.5/minimove_v0.6.5_Darwin_x86_64.tar.gz",
           "darwin/arm64": "https://github.com/initia-labs/minimove/releases/download/v0.6.5/minimove_v0.6.5_Darwin_aarch64.tar.gz"
         }
+      },
+      {
+        "name": "v1.0.0-rc.0",
+        "recommended_version": "v1.0.0-rc.0",
+        "compatible_versions": ["v1.0.0-rc.0"],
+        "height": 8058030,
+        "binaries": {
+          "linux/amd64": "https://github.com/initia-labs/minimove/releases/download/v1.0.0-rc.0/minimove_v1.0.0-rc.0_Linux_x86_64.tar.gz",
+          "linux/arm64": "https://github.com/initia-labs/minimove/releases/download/v1.0.0-rc.0/minimove_v1.0.0-rc.0_Linux_aarch64.tar.gz",
+          "darwin/amd64": "https://github.com/initia-labs/minimove/releases/download/v1.0.0-rc.0/minimove_v1.0.0-rc.0_Darwin_x86_64.tar.gz",
+          "darwin/arm64": "https://github.com/initia-labs/minimove/releases/download/v1.0.0-rc.0/minimove_v1.0.0-rc.0_Darwin_aarch64.tar.gz"
+        }
+      },
+      {
+        "name": "v1.0.2",
+        "recommended_version": "v1.0.2",
+        "compatible_versions": ["v1.0.2"],
+        "height": 8154350,
+        "binaries": {
+          "linux/amd64": "https://github.com/initia-labs/minimove/releases/download/v1.0.2/minimove_v1.0.2_Linux_x86_64.tar.gz",
+          "linux/arm64": "https://github.com/initia-labs/minimove/releases/download/v1.0.2/minimove_v1.0.2_Linux_aarch64.tar.gz",
+          "darwin/amd64": "https://github.com/initia-labs/minimove/releases/download/v1.0.2/minimove_v1.0.2_Darwin_x86_64.tar.gz",
+          "darwin/arm64": "https://github.com/initia-labs/minimove/releases/download/v1.0.2/minimove_v1.0.2_Darwin_aarch64.tar.gz"
+        }
       }
     ]
   },
@@ -142,6 +163,11 @@
         "authorizedUser": "skip",
         "indexForSkip": 0
       }
+    ],
+    "indexer": [
+      {
+        "address": "https://rest.minimove-2.initia.xyz"
+      }
     ]
   },
   "explorers": [
@@ -154,13 +180,11 @@
   ],
   "images": [
     {
-      "png": "https://raw.githubusercontent.com/initia-labs/initia-registry/main/testnets/minimove/images/minimove.png",
-      "svg": "https://raw.githubusercontent.com/initia-labs/initia-registry/main/testnets/minimove/images/minimove.svg"
+      "png": "https://raw.githubusercontent.com/initia-labs/initia-registry/main/images/minimove.png"
     }
   ],
   "logo_URIs": {
-    "png": "https://raw.githubusercontent.com/initia-labs/initia-registry/main/testnets/minimove/images/minimove.png",
-    "svg": "https://raw.githubusercontent.com/initia-labs/initia-registry/main/testnets/minimove/images/minimove.svg"
+    "png": "https://raw.githubusercontent.com/initia-labs/initia-registry/main/images/minimove.png"
   },
   "metadata": {
     "op_bridge_id": "3",
